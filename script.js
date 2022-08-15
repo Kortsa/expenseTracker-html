@@ -27,6 +27,8 @@ function addTransaction(e){
 
         addTransactionDom(transaction);
         updateValues();
+
+        
     }
 }
 // generate a random ID
