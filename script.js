@@ -27,6 +27,10 @@ function addTransaction(e){
 
         addTransactionDom(transaction);
         updateValues();
+        updateLocalStorage();
+
+        text.value = "";
+        amount.value = "";
 
         
     }
@@ -60,7 +64,7 @@ function updateValues(){
 }
 // remove tansaction from the list by using the id
 function removeTransanction(id) {
-    transactions = transactions.filter((transaction) => transaction.id =! id);
+    transactions = transactions.filter((transaction) => transaction.id !== id);
     updateLocalStorage();
     init();
 }
